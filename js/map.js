@@ -1,6 +1,6 @@
 let data = {
 	coords: [60-0.0049, 30.2-0.00273],
-	body: '<img src="logo.svg" class="logo2">',
+	body: '<img src="logo-white.svg" class="logo2">',
 	footer: 'ул.Мебельная д.47'
 };
 
