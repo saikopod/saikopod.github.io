@@ -28,8 +28,8 @@ document.body.innerHTML += `
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
     <div class="container d-flex align-items-center">
         <a class="navbar-brand" href="index.html">
-            <img src="logo-white.svg" class="logo-white">
-            <img src="logo-black.svg" class="logo-black">
+            <img src="images/logo-white.svg" class="logo-white">
+            <img src="images/logo-black.svg" class="logo-black">
         </a>
         <button class="navbar-toggler" 
                 type="button" 

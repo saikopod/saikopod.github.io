@@ -2,7 +2,7 @@ ymaps.ready(function() {
 
 	var mapData = {
 		coords: [60-0.0049, 30.2-0.00273],
-		body: '<img src="logo-white.svg" class="logo2">',
+		body: '<img src="images/logo-white.svg" class="logo2">',
 		footer: 'ул.Мебельная д.47'
 	};
 
@@ -12,7 +12,7 @@ ymaps.ready(function() {
 		controls: []
 	});
 
-	myMap.balloon.open(data.coords, {
+	myMap.balloon.open(mapData.coords, {
 		contentBody: mapData.body,
 		contentFooter: mapData.footer
 	});
