@@ -1,7 +1,7 @@
 var data = [
 
   {
-    link: 'full-page.html',
+    link: 'full-page2.html',
     author: "Admin",
     date: [29, "Января", 2019],
     header: "lorem ipsum",
