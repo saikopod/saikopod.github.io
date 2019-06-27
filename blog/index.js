@@ -1,7 +1,7 @@
 var data = [
 
   {
-    link: 'blog/pages/template/blog-single.html',
+    link: 'blog/pages/template/full-page.html',
     author: "Admin",
     date: [29, "Января", 2019],
     header: "lorem ipsum",
@@ -11,7 +11,7 @@ var data = [
   },
 
   {
-    link: 'blog/pages/template/blog-single.html',
+    link: 'blog/pages/template/full-page.html',
     author: "Admin",
     date: [28, "Января", 2019],
     header: "lorem ipsum",
@@ -21,7 +21,7 @@ var data = [
   },
 
   {
-    link: 'blog/pages/template/blog-single.html',
+    link: 'blog/pages/template/full-page.html',
     author: "Admin",
     date: [27, "Января", 2019],
     header: "lorem ipsum",
@@ -31,7 +31,7 @@ var data = [
   },
 
   {
-    link: 'blog/pages/template/blog-single.html',
+    link: 'blog/pages/template/full-page.html',
     author: "Admin",
     date: [26, "Января", 2019],
     header: "lorem ipsum",
@@ -41,7 +41,7 @@ var data = [
   },
 
   {
-    link: 'blog/pages/template/blog-single.html',
+    link: 'blog/pages/template/full-page.html',
     author: "Admin",
     date: [25, "Января", 2019],
     header: "lorem ipsum",
@@ -51,7 +51,7 @@ var data = [
   },
 
   {
-    link: 'blog/pages/template/blog-single.html',
+    link: 'blog/pages/template/full-page.html',
     author: "Admin",
     date: [24, "Января", 2019],
     header: "lorem ipsum",
