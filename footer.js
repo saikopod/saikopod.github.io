@@ -95,7 +95,7 @@ function createLoader() {
 function appendScripts() {
     document.write(`
 
-<script src="js/blog/blog-data.js"></script>
+
 <script src="js/blog/blog-footer.js"></script>
 
 <script src="js/libs/jquery.min.js"></script>

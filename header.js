@@ -1,6 +1,11 @@
 appendStyles();
+initBlogData();
 createContactsRow();
 createNavigation();
+
+function initBlogData() {
+    document.write('<script src="js/blog/blog-data.js"></script>');
+}
 
 function appendStyles() {
     document.head.innerHTML += `

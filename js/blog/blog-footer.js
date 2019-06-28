@@ -16,9 +16,9 @@ function blogRecord(data) {
     <div class="text">
       <h3 class="heading"><a href="#">${data.header}</a></h3>
       <div class="meta">
-        <div><a href="#"><span class="icon-calendar"></span>${data.date.join(', ')}</a></div>
-        <div><a href="#"><span class="icon-person"></span>${data.author}</a></div>
-        <div><a href="#"><span class="icon-chat"></span>${data.comments}</a></div>
+        <div><a href="#"><span class="icon-calendar"></span> ${data.date.join(', ')}</a></div>
+        <div><a href="#"><span class="icon-person"></span> ${data.author}</a></div>
+        <div><a href="#"><span class="icon-chat"></span> ${data.comments}</a></div>
       </div>
     </div>
 </div>
