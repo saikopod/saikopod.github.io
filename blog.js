@@ -1,12 +1,40 @@
+renderBlog();
 
-renderBlog(6);
+function renderBlog() {
 
-function renderBlog(count, offset) {
+    let search = document.location.search
+        .substring(1).split('&')
+        .map(el => el.split("="))
+        .reduce((acc, el) => {
+            acc[el[0]] = el[1];
+            return  acc
+        }, {});
+
+    let d = [].slice.call(data), page = 1, count = 6;
+    search.tag && (d = d.filter(el => ~el.tags.indexOf(search.tag)));
+
     blog.innerHTML = Array(count)
         .fill(0)
-        .map((e, i) => blogPage(data[i+(offset||0)]))
-        .join('')
+        .map((e, i) => d[i+(page-1)*count] ? blogPage(d[i+(page-1)*count]) : '')
+        .join('');
+
+    let nav = Array(Math.ceil(d.length/count)).fill(0).map(function (e, i) {
+        let n = i + 1;
+        if (n === page)
+            return `<li class="active"><span>${n}</span></li>`;
+        return `<li><a href="#">${n}</a></li>`  ;
+    }).join('');
+
+    blogNavigation.innerHTML = `   
+           
+<li><a href="#"><i class="ion-ios-arrow-back"></i></a></li>
+${nav}    
+<li><a href="#"><i class="ion-ios-arrow-forward"></i></a></li>
+
+`
 }
+
+
 
 function blogPage(page) {
     return `
@@ -29,7 +57,7 @@ function blogPage(page) {
             <div class="d-flex align-items-center mt-4">
                 <p class="mb-0">
                     <a href="${page.link}" class="btn btn-secondary">
-                        Читать дальше <span class="ion-ios-arrow-round-forward"></span>
+                        Читать <span class="ion-ios-arrow-round-forward"></span>
                     </a>
                 </p>
                 <p class="ml-auto mb-0">

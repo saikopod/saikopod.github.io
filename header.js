@@ -4,7 +4,7 @@ createContactsRow();
 createNavigation();
 
 function initBlogData() {
-    document.write('<script src="js/blog/blog-data.js"></script>');
+    document.write('<script src="blog-data.js"></script>');
 }
 
 function appendStyles() {

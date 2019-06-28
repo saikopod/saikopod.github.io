@@ -25,7 +25,7 @@ function blogRecord_homePage(data) {
     <div class="d-flex align-items-center mt-4">
     <p class="mb-0">
         <a href="${data.link}" class="btn btn-secondary">
-            Читать дальше <span class="ion-ios-arrow-round-forward"></span>
+            Читать <span class="ion-ios-arrow-round-forward"></span>
         </a>
     </p>
     <p class="ml-auto mb-0">

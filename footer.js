@@ -1,6 +1,8 @@
 createFooter();
+renderFooterBlogRecords();
 createLoader();
 appendScripts();
+
 
 function createFooter() {
     document.write(`
@@ -95,9 +97,6 @@ function createLoader() {
 function appendScripts() {
     document.write(`
 
-
-<script src="js/blog/blog-footer.js"></script>
-
 <script src="js/libs/jquery.min.js"></script>
 <script src="js/libs/jquery-migrate-3.0.1.min.js"></script>
 <script src="js/libs/popper.min.js"></script>
@@ -115,6 +114,31 @@ function appendScripts() {
 
 
 `)
+}
+
+function renderFooterBlogRecords(){
+    blogFooter.innerHTML =
+        '<h2 class="ftco-heading-2">Recent Blog</h2>'
+        + footerBlogRecord(data[0])
+        + footerBlogRecord(data[1]);
+}
+
+function footerBlogRecord(data) {
+    return `
+
+<div class="block-21 mb-4 d-flex">
+    <a class="blog-img mr-4" style="background-image: url(${data.img});"></a>
+    <div class="text">
+      <h3 class="heading"><a href="${data.link}">${data.header}</a></h3>
+      <div class="meta">
+        <div><a href="${data.link}"><span class="icon-calendar"></span> ${data.date.join(', ')}</a></div>
+        <div><a href="${data.link}"><span class="icon-person"></span> ${data.author}</a></div>
+        <div><a href="${data.link}"><span class="icon-chat"></span> ${data.comments}</a></div>
+      </div>
+    </div>
+</div>
+
+    `
 }
 
 
