@@ -1,5 +1,11 @@
-footer.innerHTML = `
+createFooter();
+createLoader();
+appendScripts();
 
+function createFooter() {
+    document.write(`
+
+<footer id="footer" class="ftco-footer ftco-bg-dark ftco-section">
 
       <div class="container">
         <div class="row mb-5">
@@ -64,8 +70,52 @@ footer.innerHTML = `
         </div>
       </div>
 
+</footer>
+
+`)
+
+}
+
+function createLoader() {
+    document.write(`
+
+<div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+        <g fill="none" stroke-width="4">
+            <circle class="path-bg" cx="24" cy="24" r="22" stroke="#eeeeee"></circle>
+            <circle class="path" cx="24" cy="24" r="22" stroke-miterlimit="10" stroke="#F96D00"></circle>
+        </g>
+    </svg>
+</div>
+
+`)
+
+}
+
+function appendScripts() {
+    document.write(`
+
+<script src="js/blog/blog-data.js"></script>
+<script src="js/blog/blog-footer.js"></script>
+
+<script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/libs/popper.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
+<script src="js/libs/jquery.easing.1.3.js"></script>
+<script src="js/libs/jquery.waypoints.min.js"></script>
+<script src="js/libs/jquery.stellar.min.js"></script>
+<script src="js/libs/owl.carousel.min.js"></script>
+<script src="js/libs/jquery.magnific-popup.min.js"></script>
+<script src="js/libs/aos.js"></script>
+<script src="js/libs/jquery.animateNumber.min.js"></script>
+<script src="js/libs/scrollax.min.js"></script>
+
+<script src="js/main.js"></script>
 
 
-`
+`)
+}
+
 
 
