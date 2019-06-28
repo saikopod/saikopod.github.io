@@ -25,22 +25,10 @@
     <link rel="stylesheet" href="css/happysadik.css">
 </head>
 <body>
-<script src="js/header.js"></script>
+<script src="header.js"></script>
 <!--HEADER END-->
-
-<section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center">
-            <div class="col-md-9 ftco-animate text-center">
-                <h1 class="mb-2 bread">Our Blog</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
-                        class="ion-ios-arrow-forward"></i></a></span> <span>Blog <i
-                        class="ion-ios-arrow-forward"></i></span></p>
-            </div>
-        </div>
-    </div>
-</section>
+<script src="breadcrumbs.js"></script>
+<script>createBreadcrumbs("Our Blog", ["Home", "index.html"], "Blog")</script>
 
 <section class="ftco-section bg-light">
     <div class="container">
@@ -79,7 +67,7 @@
     </svg>
 </div>
 
-<script src="js/footer.js"></script>
+<script src="footer.js"></script>
 
 <script src="js/blog/blog-data.js"></script>
 <script src="js/blog/blog.js"></script>

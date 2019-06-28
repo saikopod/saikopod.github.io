@@ -1,4 +1,4 @@
-document.body.innerHTML += `
+document.write(`
 
 <div class="py-2 bg-primary">
     <div class="container">
@@ -25,6 +25,7 @@ document.body.innerHTML += `
         </div>
     </div>
 </div>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
     <div class="container d-flex align-items-center">
         <a class="navbar-brand" href="index.html">
@@ -54,9 +55,8 @@ document.body.innerHTML += `
         </div>
     </div>
 </nav>
-<!-- END nav -->
 
-`;
+`);
 
 function isActive(page) {
     return ~document.location.href.indexOf(page) ? 'active' : ''
