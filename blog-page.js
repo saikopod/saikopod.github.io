@@ -1,10 +1,17 @@
-appendRightColumn();
+renderTagCloud();
+renderRightColumn();
 
-function appendRightColumn() {
+function renderTagCloud() {
+    let tags = data.find(el => ~document.location.href.indexOf(el.link))
+        .tags.map(function (tag) {
+            return `<a href="blog.html?tag=${tag}" class="tag-cloud-link">${tag}</a>`
+        }).join('');
+    tagCloud.innerHTML = `<div class="tagcloud">${tags}</div>`;
+}
 
-    document.write(`
-    
-<div class="col-lg-4 sidebar ftco-animate">
+function renderRightColumn() {
+
+    blogRightColumn.innerHTML = `
     
     <div class="sidebar-box ftco-animate">
         <h3>Category</h3>
@@ -43,16 +50,15 @@ function appendRightColumn() {
             similique, inventore eos fugit cupiditate numquam!</p>
     </div>
     
-</div>
     
-    `);
+    `;
 }
 
 function mostPopularBlogs() {
     return data.sort((a, b) => b.comments - a.comments)
         .filter((e, i) => i < 3)
         .map(function (post) {
-    return `
+            return `
         
 
 <div class="block-21 mb-4 d-flex">
