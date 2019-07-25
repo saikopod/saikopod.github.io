@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Симфония развития</title>
+    <title>Симфония развития - Контакты</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <script src="header.js"></script>
-<script>createBreadcrumbs("Contact Us", ["Home", "index.html"], "Contact")</script>
+<script>createBreadcrumbs("Контакты", ["Главная", "index.html"], "Контакты")</script>
 <!--HEADER END-->
 
 <section class="ftco-section contact-section">
@@ -80,7 +80,7 @@
         var link = "https://yandex.ru/maps/2/saint-petersburg/?from=api-maps" +
             "&ll=30.197958%2C59.995166&mode=search&oid=1358172914&ol=biz&utm_source=api-maps&z=17";
         var mapData = {coords: [60-0.0049, 30.2-0.00273], footer: 'ул.Мебельная д.47',
-            body: `<a href="${link}"><img src="images/logo-white.svg" class="logo2"></a>`};
+            body: `<a href="${link}"><img src="images/logo-white.svg" class="logo2" width="100" height="70"></a>`};
         var myMap = new ymaps.Map("map", {center: mapData.coords, zoom: 15, controls: []});
         myMap.balloon.open(mapData.coords, {contentBody: mapData.body, contentFooter: mapData.footer});
     });

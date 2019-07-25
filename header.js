@@ -54,9 +54,6 @@ function createContactsRow() {
 </div>
 
 `);
-}
-
-function createNavigation() {
     document.write(`
     
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
@@ -77,19 +74,22 @@ function createNavigation() {
 <!--         <p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p> -->
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item ${isActive('index')}"><a href="index.html" class="nav-link pl-0">Home</a></li>
-                <li class="nav-item ${isActive('about')}"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item ${isActive('teacher')}"><a href="teacher.html" class="nav-link">Teacher</a></li>
-                <li class="nav-item ${isActive('courses')}"><a href="courses.html" class="nav-link">Courses</a></li>
-                <li class="nav-item ${isActive('pricing')}"><a href="pricing.html" class="nav-link">Pricing</a></li>
-                <li class="nav-item ${isActive('blog')}"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item ${isActive('contact')}"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item ${isActive('index')}"><a href="index.html" class="nav-link pl-0">Главная</a></li>
+                <li class="nav-item ${isActive('about')}"><a href="about.html" class="nav-link">О садике</a></li>
+                <li class="nav-item ${isActive('blog')}"><a href="blog.html" class="nav-link">Новости</a></li>
+                <li class="nav-item ${isActive('teacher')}"><a href="teacher.html" class="nav-link">Педагоги</a></li>
+                <li class="nav-item ${isActive('courses')}"><a href="courses.html" class="nav-link">Занятия</a></li>
+<!--                <li class="nav-item ${isActive('pricing')}"><a href="pricing.html" class="nav-link">Pricing</a></li>-->
+                <li class="nav-item ${isActive('contact')}"><a href="contact.html" class="nav-link">Контакты</a></li>
             </ul>
         </div>
     </div>
 </nav>
     
     `);
+
+}
+function createNavigation() {
 }
 
 function isActive(page) {
