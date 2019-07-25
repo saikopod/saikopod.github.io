@@ -54,6 +54,9 @@ function createContactsRow() {
 </div>
 
 `);
+}
+
+function createNavigation() {
     document.write(`
     
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
@@ -87,9 +90,6 @@ function createContactsRow() {
 </nav>
     
     `);
-
-}
-function createNavigation() {
 }
 
 function isActive(page) {
