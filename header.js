@@ -62,8 +62,7 @@ function createNavigation() {
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
     <div class="container d-flex align-items-center">
         <a class="navbar-brand" href="index.html">
-            <img src="images/logo-white.svg" class="logo-white">
-            <img src="images/logo-black.svg" class="logo-black">
+            <img src="images/logo-white.svg" class="logo-white">    
         </a>
         <button class="navbar-toggler" 
                 type="button" 
@@ -72,7 +71,7 @@ function createNavigation() {
                 aria-controls="ftco-nav" 
                 aria-expanded="false" 
                 aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
+            <span class="oi oi-menu"></span> Меню
         </button>
 <!--         <p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p> -->
         <div class="collapse navbar-collapse" id="ftco-nav">
@@ -88,7 +87,7 @@ function createNavigation() {
         </div>
     </div>
 </nav>
-    
+<div></div>    
     `);
 }
 

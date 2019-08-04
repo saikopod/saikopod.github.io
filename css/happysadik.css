@@ -3,32 +3,24 @@
     height: 100px;
 }
 
-.logo-black {
-    display: none;
-}
-
-@media (max-width: 991.98px){
-    .logo-white {
-        display: none;
-    }
-    .logo-black {
-        display: unset;
-    }
-}
-
-nav.scrolled img.logo-black {
-    display: none;
-}
-
-nav.scrolled img.logo-white {
-    display: unset;
-}
 
 .logo-map {
     width: 120px;
     height: 70px;
 }
 
-.copyright {
 
+nav + div {
+    display:none;
+}
+
+nav.scrolled + div {
+    display: block;
+    height: 100px;
+}
+@media (max-width: 991.98px){
+    nav.scrolled + div {
+        display: block;
+        height: 120px;
+    }
 }

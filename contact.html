@@ -14,28 +14,22 @@
 <section class="ftco-section contact-section">
     <div class="container">
         <div class="row d-flex mb-5 contact-info">
-            <div class="col-md-3 d-flex">
+            <div class="col-md-4 d-flex">
                 <div class="bg-light align-self-stretch box p-4 text-center">
-                    <h3 class="mb-4">Address</h3>
+                    <h3 class="mb-4">Адрес</h3>
                     <p>ул.Мебельная д.47</p>
                 </div>
             </div>
-            <div class="col-md-3 d-flex">
+            <div class="col-md-4 d-flex">
                 <div class="bg-light align-self-stretch box p-4 text-center">
-                    <h3 class="mb-4">Contact Number</h3>
+                    <h3 class="mb-4">Контактный телефон</h3>
                     <p><a href="tel://79818033238">+7-981-803-32-38</a></p>
                 </div>
             </div>
-            <div class="col-md-3 d-flex">
+            <div class="col-md-4 d-flex">
                 <div class="bg-light align-self-stretch box p-4 text-center">
-                    <h3 class="mb-4">Email Address</h3>
+                    <h3 class="mb-4">Email адрес</h3>
                     <p><a href="mailto:info@happysadik.ru">info@happysadik.ru</a></p>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex">
-                <div class="bg-light align-self-stretch box p-4 text-center">
-                    <h3 class="mb-4">Website</h3>
-                    <p><a href="#">yoursite.com</a></p>
                 </div>
             </div>
         </div>
@@ -46,24 +40,31 @@
     <div class="container">
         <div class="row d-flex align-items-stretch no-gutters">
             <div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
-                <form action="#">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Name">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Email">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Subject">
-                    </div>
-                    <div class="form-group">
-                        <textarea name="" id="" cols="30" rows="7" class="form-control"
-                                  placeholder="Message"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-                    </div>
-                </form>
+<!--                <form action="#">-->
+<!--                    <div class="form-group">-->
+<!--                        <input type="text" class="form-control" placeholder="Your Name">-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <input type="text" class="form-control" placeholder="Your Email">-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <input type="text" class="form-control" placeholder="Subject">-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <textarea name="" id="" cols="30" rows="7" class="form-control"-->
+<!--                                  placeholder="Message"></textarea>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">-->
+<!--                    </div>-->
+<!--                </form>-->
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd8m4RnCw1tT9hG7lyMXvapDKSvXB0pw30u8NPO6yBWP1YmLA/viewform?embedded=true"
+                        width="100%"
+                        height="583"
+                        frameborder="0"
+                        marginheight="0"
+                        scrolling="no"
+                        marginwidth="0"></iframe>
             </div>
             <div class="col-md-6 d-flex align-items-stretch">
                 <div id="map"></div>
@@ -79,10 +80,27 @@
     ymaps.ready(function() {
         var link = "https://yandex.ru/maps/2/saint-petersburg/?from=api-maps" +
             "&ll=30.197958%2C59.995166&mode=search&oid=1358172914&ol=biz&utm_source=api-maps&z=17";
-        var mapData = {coords: [60-0.0049, 30.2-0.00273], footer: 'ул.Мебельная д.47',
-            body: `<a href="${link}"><img src="images/logo-white.svg" class="logo2" width="100" height="70"></a>`};
-        var myMap = new ymaps.Map("map", {center: mapData.coords, zoom: 15, controls: []});
-        myMap.balloon.open(mapData.coords, {contentBody: mapData.body, contentFooter: mapData.footer});
+
+        var coords= [60-0.0049, 30.2-0.00273];
+
+
+        var myMap = new ymaps.Map("map", {
+            center: coords,
+            zoom: 15,
+            controls: []
+        });
+
+
+
+        var myPlacemarkWithContent = new ymaps.Placemark(coords, {
+            hintContent: `ул.Мебельная д.47`,
+            balloonContent: `<a href="${link}"><img src="images/logo-white.svg" class="logo2" width="99px" ><br>ул.Мебельная д.47</a>`,
+            iconContent: `👪`
+        });
+
+        myMap.geoObjects
+
+            .add(myPlacemarkWithContent);
     });
 </script>
 </body>
